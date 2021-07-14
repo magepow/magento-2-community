@@ -2,13 +2,13 @@
 * @Author: Alex Dong
 * @Date:   2020-07-29 13:21:07
 * @Last Modified by:   Alex Dong
-* @Last Modified time: 2021-07-12 15:46:43
+* @Last Modified time: 2021-07-14 09:06:41
 */
 
 define([
     'jquery',
     'slick',
-    'jquery-ui-modules/widget'
+    'jquery/ui'
     ], function ($, slick) {
 		"use strict";
         $.widget('magepow.gridSlider', {
