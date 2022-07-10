@@ -2,7 +2,7 @@
 * @Author: Alex Dong
 * @Date:   2020-07-29 13:21:07
 * @Last Modified by:   Alex Dong
-* @Last Modified time: 2022-07-01 08:36:10
+* @Last Modified time: 2022-07-10 14:50:11
 */
 
 define([
@@ -23,16 +23,14 @@ define([
             	this._initSlider();
             },
 
-			_uniqid: function (a = "", b = false) {
-			    const c = Date.now()/1000;
-			    let d = c.toString(16).split(".").join("");
-			    while(d.length < 14) d += "0";
-			    let e = "";
-			    if(b){
-			        e = ".";
-			        e += Math.round(Math.random()*100000000);
-			    }
-			    return a + d + e;
+			_uniqid: function (length=10) {
+	            let result       	   = '';
+	            const characters 	   = 'abcdefghijklmnopqrstuvwxyz0123456789';
+	            const charactersLength = characters.length;
+	            for ( let i = 0; i < length; i++ ) {
+	            	result += characters.charAt(Math.floor(Math.random() * charactersLength));
+	           	}
+	           return result;
 			},
 
             _initSlider: function () {
@@ -142,8 +140,9 @@ define([
                 el.on('init', function(event, slick){
                 	$('body').trigger('contentUpdated'); // support lazyload
                     var video = $(this).find('.external-video');
-                    video.click(function(event) {
+                    video.on('click', function(event) {
                         var $this = $(this);
+                        if($this.hasClass('embed')) return;
                         var img = $this.find('img');
                         event.preventDefault();
                         var url = $(this).data('video');
