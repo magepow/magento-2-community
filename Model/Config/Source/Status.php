@@ -3,11 +3,11 @@
 /**
  * @Author: nguyen
  * @Date:   2020-06-09 20:10:33
- * @Last Modified by:   Alex Dong
- * @Last Modified time: 2020-11-20 10:34:35
+ * @Last Modified by: Alex Dong
+ * @Last Modified time: 2023-01-09 10:47:12
  */
 
-namespace Magepow\Core\Model\Config\Source;
+namespace Magepow\Community\Model\Config\Source;
 
 class Status
 {
@@ -22,8 +22,7 @@ class Status
     public static function getAvailableStatuses()
     {
         return [
-            self::STATUS_ENABLED => __('Enabled')
-            , self::STATUS_DISABLED => __('Disabled'),
+            self::STATUS_ENABLED => __('Enabled'), self::STATUS_DISABLED => __('Disabled'),
         ];
     }
 

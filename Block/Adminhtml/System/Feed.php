@@ -3,11 +3,11 @@
 /**
  * @Author: nguyen
  * @Date:   2020-04-24 09:45:19
- * @Last Modified by:   nguyen
- * @Last Modified time: 2020-04-24 12:26:16
+ * @Last Modified by: Alex Dong
+ * @Last Modified time: 2023-01-09 10:48:46
  */
 
-namespace Magepow\Core\Block\Adminhtml\System;
+namespace Magepow\Community\Block\Adminhtml\System;
 
 class Feed extends \Magento\Config\Block\System\Config\Form\Field
 {
@@ -19,20 +19,19 @@ class Feed extends \Magento\Config\Block\System\Config\Form\Field
     public function render(\Magento\Framework\Data\Form\Element\AbstractElement $element)
     {
         try {
-    		
 
-      		$html = "
+
+            $html = "
                     <div class='magepow_feed'></div>
                     <script type='text/javascript'>
                         require(['jquery', 'magepow/slick', 'magepow/feed']);
                     </script>
       		";
-    		
-    		return $html;
-    	
-		} catch (Exception $e) {
-      	
-      		return $e->getMessage();
-  		}
+
+            return $html;
+        } catch (Exception $e) {
+
+            return $e->getMessage();
+        }
     }
 }

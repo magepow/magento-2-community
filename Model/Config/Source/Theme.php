@@ -3,11 +3,12 @@
 /**
  * @Author: nguyen
  * @Date:   2020-06-12 08:42:03
- * @Last Modified by:   Alex Dong
- * @Last Modified time: 2020-11-20 10:35:14
+ * @Last Modified by: Alex Dong
+ * @Last Modified time: 2023-01-09 10:46:41
  */
 
-namespace Magepow\Core\Model\Config\Source;
+namespace Magepow\Community\Model\Config\Source;
+
 use Magento\Theme\Model\Theme\Collection;
 use Magento\Framework\App\Area;
 

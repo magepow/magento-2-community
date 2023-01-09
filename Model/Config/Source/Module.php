@@ -3,11 +3,11 @@
 /**
  * @Author: Alex Dong
  * @Date:   2020-11-20 10:33:07
- * @Last Modified by:   Alex Dong
- * @Last Modified time: 2020-11-20 10:36:51
+ * @Last Modified by: Alex Dong
+ * @Last Modified time: 2023-01-09 10:48:03
  */
 
-namespace Magepow\Core\Model\Config\Source;
+namespace Magepow\Community\Model\Config\Source;
 
 class Module implements \Magento\Framework\Option\ArrayInterface
 {
@@ -22,8 +22,7 @@ class Module implements \Magento\Framework\Option\ArrayInterface
      */
     public function __construct(
         \Magento\Framework\Module\ModuleList $moduleList
-    )
-    {
+    ) {
         $this->moduleList = $moduleList;
     }
 
@@ -31,7 +30,7 @@ class Module implements \Magento\Framework\Option\ArrayInterface
     {
         $modules = $this->getAllModules();
         $options = [];
-        foreach($modules as $module){
+        foreach ($modules as $module) {
             $options[] = ['value' => $module, 'label' => $module];
         }
         return $options;
