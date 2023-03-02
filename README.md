@@ -1,3 +1,5 @@
+[<img src="https://github.com/magepow/themeforest/blob/master/shopify/shopify_affiliate.jpg" >](https://shopify.pxf.io/VyL446)
+
 # Magepow Core for Magento 2
 
 [![Latest Stable Version](https://poser.pugx.org/magepow/community/v/stable)](https://packagist.org/packages/magepow/community)
